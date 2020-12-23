@@ -1,0 +1,66 @@
+name: gimig_gastro_image_upload
+description: A new Flutter application.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+
+  firebase_core: ^0.5.3
+  firebase_storage: ^5.2.0
+  image_picker: ^0.6.7+15
+  video_player: ^1.0.1
+  cloud_firestore: ^0.14.2
+  firebase_auth: ^0.18.4+1
+
+  path_provider: ^1.6.24
+  network_to_file_image: ^2.3.6
+
+  flutter_image_compress: ^0.7.0
+
+  provider: ^4.3.2+1
+
+  flutter_focus_watcher: ^0.0.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+   - images/
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: fonts/roboto/Roboto-Thin.ttf
+          weight: 300
+
+        - asset: fonts/roboto/Roboto-Medium.ttf
+          weight: 400
+
+        - asset: fonts/roboto/Roboto-Regular.ttf
+
+        - asset: fonts/roboto/Roboto-Italic.ttf
+          style: italic
+
+        - asset: fonts/roboto/Roboto-Bold.ttf
+          weight: 700
+
+        - asset: fonts/roboto/Roboto-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+        - asset: fonts/roboto/Roboto-Black.ttf
+          weight: 900
