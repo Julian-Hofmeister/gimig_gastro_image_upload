@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gimig_gastro_image_upload/screens/category_screen.dart';
 import 'package:gimig_gastro_image_upload/screens/display_screen.dart';
 
 import '../constants.dart';
@@ -256,7 +257,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.pushNamed(context, CategoryScreen.id,
+                                arguments: "beverages");
+                          },
                           child: Container(
                             height: MediaQuery.of(context).size.height * 0.2,
                             width: MediaQuery.of(context).size.height * 0.2,
@@ -285,7 +289,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.pushNamed(context, CategoryScreen.id,
+                                arguments: "food");
+                          },
                           child: Container(
                             height: MediaQuery.of(context).size.height * 0.2,
                             width: MediaQuery.of(context).size.height * 0.2,

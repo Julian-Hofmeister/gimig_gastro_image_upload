@@ -1,9 +1,9 @@
 import 'package:gimig_gastro_image_upload/components/custom_app_bar.dart';
 import 'package:gimig_gastro_image_upload/constants.dart';
+import 'package:gimig_gastro_image_upload/food_class.dart';
 import 'package:gimig_gastro_image_upload/screens/upload_screen.dart';
 import 'package:gimig_gastro_image_upload/services/firebase_storage_service.dart';
 import 'package:gimig_gastro_image_upload/services/cloud_storage_service.dart';
-import 'file:///home/ju/AndroidStudioProjects/gimig_gastro_application/lib/classes/food_class.dart';
 import 'package:gimig_gastro_image_upload/services/image_cache_services.dart';
 import 'package:network_to_file_image/network_to_file_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -15,6 +15,12 @@ Directory _appDocsDir;
 
 class DisplayScreen extends StatefulWidget {
   static const String id = 'display_screen';
+
+  DisplayScreen({this.path, this.path2, this.path3});
+
+  final String path;
+  final String path2;
+  final String path3;
   @override
   _DisplayScreenState createState() => _DisplayScreenState();
 }
@@ -56,8 +62,10 @@ class _DisplayScreenState extends State<DisplayScreen> {
       body: StreamBuilder<QuerySnapshot>(
         //STREAM
         stream: _firestore
-            .collection("julian@web.de")
-            .doc("menu")
+            .collection("restaurants")
+            .doc("julian@web.de")
+            .collection("menu")
+            .doc("food")
             .collection("daily_menu")
             .snapshots(),
         builder: (context, snapshot) {

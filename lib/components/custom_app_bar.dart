@@ -20,8 +20,8 @@ AppBar headerNav({String title, context}) {
               color: Colors.white,
             ),
             onPressed: () {
-              // Navigator.pop(context);
-              Navigator.pushNamed(context, DisplayScreen.id);
+              Navigator.pop(context);
+              // Navigator.pushNamed(context, DisplayScreen.id);
             }),
         Text(
           title,
